@@ -1,0 +1,280 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "dce28b13-6610-49ad-aaf9-fd65c4a0ba13",
+            "actions": [
+                {
+                    "name": "Turn",
+                    "type": "Button",
+                    "id": "1e4cb8b9-4573-420e-b25c-1d86576d1339",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Gas/Reverse",
+                    "type": "Value",
+                    "id": "d0886154-56f5-412b-92d5-6e4e5d85cbee",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Handbreak",
+                    "type": "Button",
+                    "id": "fbe7d84d-24f2-473c-80b8-9f95f346f2cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Controller Axis",
+                    "id": "6b5cf7f1-dc54-441b-b94b-05181dda0018",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "f8505770-dbd4-4f37-aed1-4637bd94a3f5",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "0a9e6978-e605-4a0a-9f9f-e2dcf3b487d6",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller Digitals",
+                    "id": "ee3d4113-2651-4786-a589-2459af583f3e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "a670716a-92ae-43f4-b161-0b257248f1c5",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "be86f402-ee24-4b23-9a1f-cc2150f45d6e",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard",
+                    "id": "69590c20-67f3-44da-abc4-354341e49162",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "e536dbd8-ac5a-4b9d-9428-c75c786dc4c8",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5b8e35ef-c5cf-464b-9905-a859bce8bf44",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller Axis",
+                    "id": "9f9035a2-de79-409c-bce2-bb9bc397cba5",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "9f25fb32-a155-4a30-a218-0c4fdd334419",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/button8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6a3eb91c-d092-44fd-a1d0-83e9dc95b4dc",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller Digitals",
+                    "id": "e1fc0720-9f6e-4d80-8a35-16f1cbb83b5b",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "e9e30c6e-ddbe-4e2d-8011-23cd5203adde",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "239a0913-d3fc-48b7-b278-00f8678430ca",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard",
+                    "id": "f8f6fbea-41db-41e5-80ad-2a82e3a2ded8",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d6869b32-e2f2-4bed-a456-11a7ff1493ee",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "986e9528-7ffd-4fab-84d8-a792c93be74b",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas/Reverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller Square",
+                    "id": "84b9a092-a6d9-4242-8d86-b078e37d4b33",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Handbreak",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fa708a7d-3a91-4480-bbfd-78df791653cd",
+                    "path": "<HID::MY-POWER CO.,LTD. 2In1 USB Joystick>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Handbreak",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard Space",
+                    "id": "37e85132-b342-401f-bff8-c5af1ac8e035",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Handbreak",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "ce1b5cc4-55d6-437e-a614-e10fe5f4e50d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Handbreak",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using Cinemachine;
-using static UnityEngine.InputSystem.InputAction;
+using System.Runtime.CompilerServices;
 
-
-public class Player : MonoBehaviour
+public class Player_original : MonoBehaviour
 {
+    
     [SerializeField] private float speedVariable;
     [SerializeField] private float turnSpeedVariable;
-    private float handBreak;
+    private bool handBreak;
     private bool movingBack;
     private bool reduceMovingBackTimer;
     private float movingBackTimer;
@@ -21,7 +23,6 @@ public class Player : MonoBehaviour
     [SerializeField] Transform leftRear;
     [SerializeField] Transform rightRear;
 
-    [SerializeField] private LayerMask roughtTerrainLayer;
 
     private bool pressingTurnLong;
     private float pressingTurnTime;
@@ -34,8 +35,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
         CreateCamera();
+        
 
         movingBackTimer = 0.3f;
         reduceMovingBackTimer = false;
@@ -55,23 +56,12 @@ public class Player : MonoBehaviour
     private void Update()
     {
         // Keys
+        acceleration = Input.GetAxis("p1_Vertical");
+        turn = Input.GetAxisRaw("p1_Horizontal");
+        handBreak = Input.GetButton("p1_Fire1");
         frontDirection = front.position - back.position;
 
         MovingBackTimerMethod();
-
-    }
-
-    public void Turn(CallbackContext context)
-    {
-        turn = context.ReadValue<Vector2>().x;
-    }
-    public void GasReverse(CallbackContext context)
-    {
-        acceleration = context.ReadValue<Vector2>().y;
-    }
-    public void Break(CallbackContext context)
-    {
-        handBreak = context.ReadValue<Vector2>().y;
     }
 
 
@@ -123,7 +113,7 @@ public class Player : MonoBehaviour
     private void HandBreak()
     {
         // Handbreak
-        if (handBreak > 0.1f)
+        if (handBreak)
         {
             if (rb.velocity.magnitude > 5)
             {
@@ -143,7 +133,7 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (rb.velocity.magnitude > 2)
+            if (acceleration != 0)
             {
                 dust.Play();
                 dust.enableEmission = true;
@@ -202,7 +192,7 @@ public class Player : MonoBehaviour
         // Timer since key was pressed
         if (movingBack)
         {
-            if (acceleration > -0.1f)
+            if (Input.GetButtonUp("Vertical"))
             {
                 reduceMovingBackTimer = true;
             }
@@ -216,22 +206,6 @@ public class Player : MonoBehaviour
             movingBack = false;
             reduceMovingBackTimer = false;
             movingBackTimer = 0.3f;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            rb.mass = 2.2f;
-
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            rb.mass = 1f;
         }
     }
 }

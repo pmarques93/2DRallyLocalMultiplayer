@@ -4955,8 +4955,9 @@ GameObject:
   - component: {fileID: 3150299080645809358}
   - component: {fileID: 3150299080645809357}
   - component: {fileID: 3150299080645809359}
+  - component: {fileID: 6001152861409757752}
   m_Layer: 0
-  m_Name: p1
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5022,7 +5023,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7f557884a7ef32a418b8383d9cb23902, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82705840fbb18ff45a56df7fab0bb147, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5092,17 +5093,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01c7af78f290b84eb97d66d67852353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camRangeValue: 5
   speedVariable: 1250
   turnSpeedVariable: 200
   back: {fileID: 3150299080801456181}
   front: {fileID: 3150299080324363728}
   leftRear: {fileID: 3150299080939423233}
   rightRear: {fileID: 3150299080073650593}
+  roughtTerrainLayer:
+    serializedVersion: 2
+    m_Bits: 256
   trailRender:
   - {fileID: 3150299081359652896}
   - {fileID: 3150299080549043711}
   dust: {fileID: 3150299080154973387}
+  rb: {fileID: 0}
+  cam: {fileID: 834862673241311911, guid: b4f8892650a53cc41ab3dde28f613818, type: 3}
+--- !u!114 &6001152861409757752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3150299080645809354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 08e18830a18318c4e9e9afc13e661024,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3150299080645809359}
+        m_MethodName: Turn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e4cb8b9-4573-420e-b25c-1d86576d1339
+    m_ActionName: Gameplay/Gas
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3150299080645809359}
+        m_MethodName: GasReverse
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d0886154-56f5-412b-92d5-6e4e5d85cbee
+    m_ActionName: Gameplay/Gas[/MY-POWER CO.,LTD. 2In1 USB Joystick/button8,/MY-POWER
+      CO.,LTD. 2In1 USB Joystick/button8]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3150299080645809359}
+        m_MethodName: Break
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fbe7d84d-24f2-473c-80b8-9f95f346f2cc
+    m_ActionName: Gameplay/Handbreak[/MY-POWER CO.,LTD. 2In1 USB Joystick/button7,/MY-POWER
+      CO.,LTD. 2In1 USB Joystick/button7]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &3150299080801456180
 GameObject:
   m_ObjectHideFlags: 0
